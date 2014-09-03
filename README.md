@@ -20,7 +20,10 @@ bower install
 gulp
 
 ## Test
-http://YouLocalIP:3002
+http://YouLocalIP:3000
+
+## Distribution
+gulp dist
 
 ## destination project folder
 /dist

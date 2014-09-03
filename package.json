@@ -8,7 +8,7 @@
     "grunt": "*",
     "grunt-webfont": "*",
     "grunt-favicons": "*",
-    "gulp": "3.8.6",
+    "gulp": "*",
     "gulp-util": "*",
     "gulp-concat": "*",
     "gulp-rename": "*",
@@ -25,6 +25,6 @@
     "gulp-strip-debug": "~0.3.0",
     "gulp-assemble": "git://github.com/assemble/gulp-assemble",
     "handlebars-helpers": "git://github.com/assemble/handlebars-helpers#v0.6.0",
-    "gulp-minify-html": "+"
+    "gulp-minify-html": "*"
   }
 }
