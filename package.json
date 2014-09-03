@@ -1,0 +1,30 @@
+{
+  "name": "gulp",
+  "version": "0.0.0",
+  "description": "gulp",
+  "author": "gulper",
+  "devDependencies": {
+    "coffee-script": "*",
+    "grunt": "*",
+    "grunt-webfont": "*",
+    "grunt-favicons": "*",
+    "gulp": "3.8.6",
+    "gulp-util": "*",
+    "gulp-concat": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "gulp-livereload": "*",
+    "tiny-lr": "*",
+    "gulp-coffee": "*",
+    "gulp-minify-css": "*",
+    "gulp-plumber": "*",
+    "gulp-notify": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-sass": "*",
+    "browser-sync": "*",
+    "gulp-strip-debug": "~0.3.0",
+    "gulp-assemble": "git://github.com/assemble/gulp-assemble",
+    "handlebars-helpers": "git://github.com/assemble/handlebars-helpers#v0.6.0",
+    "gulp-minify-html": "+"
+  }
+}

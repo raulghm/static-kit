@@ -1,0 +1,17 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  @include responsive-report();
+}
+
+section {
+  position: relative;
+}
+
+.inner {
+  max-width: 980px;
+  padding: 20px;
+  margin: 0 auto;
+  @extend .cf;
+  position: relative;
+}

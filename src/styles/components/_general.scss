@@ -1,0 +1,7 @@
+.btn {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 12px 15px;
+	line-height: 1em;
+	@include font-size(1.3);
+}
