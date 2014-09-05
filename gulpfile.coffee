@@ -33,7 +33,6 @@ SCRIPTS = [
 #	 gulp tasks
 #	 ==========================================================================
 
-
 # copy vendor scripts
 gulp.task "copy", ->
 	gulp.src [
@@ -147,7 +146,7 @@ gulp.task 'watch', ->
 # default task
 gulp.task 'default', [
 	"copy"
-	"assemble-dist"
+	"assemble"
 	"styles"
 	"scripts"
 	"browser-sync"
@@ -157,7 +156,7 @@ gulp.task 'default', [
 # build task
 gulp.task 'dist', [
 	"copy"
-	"assemble"
+	"assemble-dist"
 	"styles-dist"
 	"scripts-dist"
 	"html"
