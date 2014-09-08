@@ -26,6 +26,7 @@ dest         = "dist"
 # bower components and scripts files here
 SCRIPTS = [
 	"bower_components/detectizr/src/detectizr.js"
+	"bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"
 	dest + "/scripts/scripts.js"
 ]
 
@@ -109,7 +110,7 @@ gulp.task "assemble", ->
 	.pipe browserSync.reload stream:true
 
 # assemble-dist
-gulp.task "assemble", ->
+gulp.task "assemble-dist", ->
 	gulp.src( src + "/templates/pages/*.hbs")
 	.pipe assemble
 		data: src + "/data/*.json"
@@ -126,7 +127,7 @@ gulp.task "browser-sync", ->
 			baseDir: dest
 
 # html
-gulp.task "html", ->
+gulp.task "html", ["assemble-dist", "styles-dist", "scripts-dist"], ->
 	gulp.src dest + "/*.html"
 	.pipe plumber()
 	.pipe minifyHTML()
@@ -137,6 +138,7 @@ gulp.task 'watch', ->
 	gulp.watch [src + '/scripts/**/*.coffee'], ['scripts']
 	gulp.watch [src + '/styles/**/*.scss'], ['styles']
 	gulp.watch [src + '/templates/**/*.hbs'], ['assemble']
+	gulp.watch [src + '/data/**/*.*'], ['assemble']
 	gulp.watch [src + "/vendor/scripts/plugins/*.js"], ['scripts']
 
 #
@@ -156,8 +158,5 @@ gulp.task 'default', [
 # build task
 gulp.task 'dist', [
 	"copy"
-	"assemble-dist"
-	"styles-dist"
-	"scripts-dist"
 	"html"
 ]
