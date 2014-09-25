@@ -4,12 +4,18 @@ body {
   @include responsive-report();
 }
 
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 section {
   position: relative;
 }
 
 .inner {
-  max-width: 980px;
+  max-width: 1200px;
   padding: 20px;
   margin: 0 auto;
   @extend .cf;

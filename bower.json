@@ -21,6 +21,8 @@
     "fontawesome": "*",
     "bootstrap-sass-official": "*",
     "pesticide": "git://github.com/mrmrs/pesticide",
-    "raulghm-sass-utils": "*"
+    "raulghm-sass-utils": "*",
+    "instafeed.js": "*",
+    "velocity": "~1.1.0"
   }
 }

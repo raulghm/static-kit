@@ -26,7 +26,10 @@ dest         = "dist"
 # bower components and scripts files here
 SCRIPTS = [
 	"bower_components/detectizr/src/detectizr.js"
-	"bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"
+	"bower_components/instafeed.js/instafeed.js"
+	"bower_components/velocity/velocity.js"
+	"bower_components/velocity/velocity.ui.js"
+	# "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"
 	dest + "/scripts/scripts.js"
 ]
 

@@ -1,5 +1,5 @@
 // vendor
-@import "../../bower_components/pesticide/sass/pesticide";
+// @import "../../bower_components/pesticide/sass/pesticide";
 @import "../../bower_components/fontawesome/scss/font-awesome";
 @import "components/bootstrap/bootstrap";
 @import "../../bower_components/bourbon/dist/bourbon";
@@ -12,7 +12,8 @@
 // helpers
 @import "helpers/helpers";
 
-// plugins
+// fonts
+@import "fonts/fo";
 
 // layout
 @import "layout/scaffolding";
