@@ -21,6 +21,6 @@
     "gulp-assemble": "git://github.com/assemble/gulp-assemble",
     "handlebars-helpers": "git://github.com/assemble/handlebars-helpers#v0.6.0",
     "gulp-minify-html": "*",
-    "runSequence": "*"
+    "run-sequence": "*"
   }
 }

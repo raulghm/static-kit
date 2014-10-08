@@ -16,7 +16,7 @@ minifyHTML     = require('gulp-minify-html')
 browserSync    = require("browser-sync")
 gulpStripDebug = require("gulp-strip-debug")
 reload         = require("gulp-livereload")
-runSequence    = require('run-sequence');
+runSequence    = require('run-sequence')
 
 # paths
 src          = "src"
@@ -48,7 +48,7 @@ gulp.task "coffee", ->
 		bare: true
 	.pipe concat("scripts.js")
 	.pipe gulp.dest dest + "/scripts"
-	.pipe livereload()
+	.pipe reload()
 
 # coffee-dist
 gulp.task "coffee-dist", ->
@@ -82,7 +82,7 @@ gulp.task "styles", ->
 		onError: (err) -> notify().write(err)
 	.pipe autoprefixer("last 15 version")
 	.pipe gulp.dest dest + "/styles"
-	.pipe livereload()
+	.pipe reload()
 
 # styles-dist
 gulp.task "styles-dist",  ->
@@ -143,7 +143,7 @@ gulp.task 'watch', ->
 #  defaul task
 #	 ==========================================================================
 
-gulp.task "default" (cb) ->
+gulp.task "default", ['copy'], (cb) ->
 	runSequence "styles", [
 		"copy"
 		"assemble"
@@ -158,7 +158,7 @@ gulp.task "default" (cb) ->
 #	 ==========================================================================
 #
 
-gulp.task "dist", (cb) ->
+gulp.task "dist", ['copy'], (cb) ->
 	runSequence "styles-dist", [
 		"copy"
 		"assemble-dist"
