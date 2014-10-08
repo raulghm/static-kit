@@ -15,9 +15,8 @@ assemble       = require("gulp-assemble")
 minifyHTML     = require('gulp-minify-html')
 browserSync    = require("browser-sync")
 gulpStripDebug = require("gulp-strip-debug")
-lr             = require("tiny-lr")
-livereload     = require("gulp-livereload")
-server         = lr()
+reload         = require("gulp-livereload")
+runSequence    = require('run-sequence');
 
 # paths
 src          = "src"
@@ -26,15 +25,11 @@ dest         = "dist"
 # bower components and scripts files here
 SCRIPTS = [
 	"bower_components/detectizr/src/detectizr.js"
-	"bower_components/instafeed.js/instafeed.js"
-	"bower_components/velocity/velocity.js"
-	"bower_components/velocity/velocity.ui.js"
-	# "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"
 	dest + "/scripts/scripts.js"
 ]
 
 #
-#	 gulp tasks
+#	 dev tasks
 #	 ==========================================================================
 
 # copy vendor scripts
@@ -122,7 +117,7 @@ gulp.task "assemble-dist", ->
 	.pipe gulp.dest dest
 
 # browser-sync
-gulp.task "browser-sync", ->
+gulp.task "serve", ->
 	browserSync.init null,
 		# proxy: "site.dev"
 		open: false
@@ -130,7 +125,7 @@ gulp.task "browser-sync", ->
 			baseDir: dest
 
 # html
-gulp.task "html", ["assemble-dist", "styles-dist", "scripts-dist"], ->
+gulp.task "html", ->
 	gulp.src dest + "/*.html"
 	.pipe plumber()
 	.pipe minifyHTML()
@@ -145,21 +140,29 @@ gulp.task 'watch', ->
 	gulp.watch [src + "/vendor/scripts/plugins/*.js"], ['scripts']
 
 #
-#  main tasks
+#  defaul task
 #	 ==========================================================================
 
-# default task
-gulp.task 'default', [
-	"copy"
-	"assemble"
-	"styles"
-	"scripts"
-	"browser-sync"
-	"watch"
-]
+gulp.task "default" (cb) ->
+	runSequence "styles", [
+		"copy"
+		"assemble"
+		"styles"
+		"scripts"
+		"serve"
+		"watch"
+	], cb
 
-# build task
-gulp.task 'dist', [
-	"copy"
-	"html"
-]
+#
+#  dist task
+#	 ==========================================================================
+#
+
+gulp.task "dist", (cb) ->
+	runSequence "styles-dist", [
+		"copy"
+		"assemble-dist"
+		"styles-dist"
+		"scripts-dist"
+		"html"
+	], cb

@@ -10,7 +10,6 @@
     "gulp-rename": "*",
     "gulp-uglify": "*",
     "gulp-livereload": "*",
-    "tiny-lr": "*",
     "gulp-coffee": "*",
     "gulp-minify-css": "*",
     "gulp-plumber": "*",
@@ -18,9 +17,10 @@
     "gulp-autoprefixer": "*",
     "gulp-sass": "*",
     "browser-sync": "*",
-    "gulp-strip-debug": "~0.3.0",
+    "gulp-strip-debug": "*",
     "gulp-assemble": "git://github.com/assemble/gulp-assemble",
     "handlebars-helpers": "git://github.com/assemble/handlebars-helpers#v0.6.0",
-    "gulp-minify-html": "*"
+    "gulp-minify-html": "*",
+    "runSequence": "*"
   }
 }
