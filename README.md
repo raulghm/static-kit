@@ -10,7 +10,10 @@
 ## Features
 
 * Gulpjs for automation tasks
+* Autoreload tasks detecting gulpfile.js and vendor_scripts.js changes
 * Bower ready
+* Twitter Bootstrap ready
+* BEM CSS ready (Block, Element, Modifier)
 * Assemble
 * BrowserSync
 * Livereload
