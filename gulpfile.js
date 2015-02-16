@@ -6,22 +6,22 @@
  *	url: https://github.com/raulghm/static-kit
  *	github: http://github.com/raulghm
  *	email: raulghm@gmail.com
- *	twitter: @raulghm
- *	web: raulh.com
+ *	twitter: http://twitter.com/raulghm
+ *	web: http://raulh.com
  *
- * 	 Copyright 2015 Raúl Hernández M., All rights reserved.
+ *	Copyright 2015 Raúl Hernández M., All rights reserved.
  *
- * 	 Licensed under the Apache License, Version 2.0 (the "License");
- * 	 you may not use this file except in compliance with the License.
- * 	 You may obtain a copy of the License at
+ *	Licensed under the Apache License, Version 2.0 (the "License");
+ *	you may not use this file except in compliance with the License.
+ *	You may obtain a copy of the License at
  *
- * 	 https://www.apache.org/licenses/LICENSE-2.0
+ *	https://www.apache.org/licenses/LICENSE-2.0
  *
- * 	 Unless required by applicable law or agreed to in writing, software
- * 	 distributed under the License is distributed on an "AS IS" BASIS,
- * 	 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * 	 See the License for the specific language governing permissions and
- * 	 limitations under the License
+ *	Unless required by applicable law or agreed to in writing, software
+ *	distributed under the License is distributed on an "AS IS" BASIS,
+ *	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *	See the License for the specific language governing permissions and
+ *	limitations under the License
  * 	-------------------------------------------- */
 
 'use strict';
@@ -129,9 +129,10 @@ gulp.task('fonts', function() {
 gulp.task('pages', function() {
 	src.pages = [SRC + '/templates/pages/**/*', SRC + '/templates/layouts/**/*', SRC + '/templates/partials/**/*', SRC + '/data/**/*.{yml,json}'];
 	return gulp.src(src.pages[0])
+		.pipe($.plumber())
 		.pipe($.if('*.hbs', $.assemble({
 			data: src.pages[3],
-			partials: SRC + '/templates/partials/**/*.hbs',
+			partials: ['./*.md', SRC + '/templates/partials/**/*.hbs'],
 			layout: 'default',
 			layoutext: '.hbs',
 			layoutdir: SRC + '/templates/layouts'
@@ -200,6 +201,7 @@ gulp.task('scripts', function() {
  * 	Gulp tasks
  * 	-------------------------------------------- */
 
+
 /* 	--------------------------------------------
  * 	The default task 
  *	-> gulp
@@ -209,6 +211,7 @@ gulp.task('default', ['serve']);
 /* 	--------------------------------------------
  * 	The build task
  *	-> gulp build
+ * 	or
  *	-> gulp build --dist (for distribution)
  * 	-------------------------------------------- */
 gulp.task('build', ['clean'], function (cb) {
