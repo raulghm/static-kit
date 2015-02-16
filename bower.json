@@ -1,26 +1,29 @@
 {
   "name": "bower",
-  "version": "1.0.0",
-  "homepage": "https://github.com/raulghm/static-kit",
+  "version": "0.0.1",
   "authors": [
-    "raulghm <raulghm@gmail.com>"
+    "Raul Hernandez <raulghm@gmail.com>"
   ],
   "license": "MIT",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
-  "devDependencies": {
-    "jquery": "*",
-    "modernizr": "*",
+  "dependencies": {
+    "font-awesome": "*",
+    "modernizr": "~2.7.1",
+    "detectizr": "~2.0.0",
+    "bourbon": "3.2.3",
     "jeet.gs": "*",
-    "bourbon": "3.2.*",
-    "fontawesome": "*",
-    "bootstrap-sass-official": "*",
+    "jquery": "1.10.1",
     "pesticide": "git://github.com/mrmrs/pesticide",
+    "highlight": "git://github.com/isagalaev/highlight.js",
     "raulghm-sass-utils": "*"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.3",
+    "log": "~0.1.5"
   }
 }

@@ -1,3 +1,10 @@
+# Git uses this file to determine which files and directories to ignore
+# https://help.github.com/articles/ignoring-files
+
+
+# System files
+# ===============
+
 /*.sublime-project
 *.sublime-workspace
 
@@ -19,6 +26,11 @@ Icon
 .Spotlight-V100
 .Trashes
 
+
+# Project's files
+# ===============
+
+npm-debug.log
 bower_components
 node_modules
 dist

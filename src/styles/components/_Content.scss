@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------
+
+Name:     ComponentName
+Created:  00/00/00
+Author:   Name <email>
+
+Docs: https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
+
+Naming example:
+	ComponentName
+	ComponentName--modifierName
+	ComponentName-descendantName
+	ComponentName.is-stateOfComponent
+	u-utilityName
+
+-------------------------------------------------------------------*/
+
+$component: 'ComponentName';
+
+.#{$component} {
+
+  &-descendantName {}
+
+  &--modifierName {
+    .#{$component}-descendantName {}
+  }
+
+  &.is-stateOfComponent {}
+
+  .u-utilityName {}
+
+}

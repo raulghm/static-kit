@@ -1,26 +1,63 @@
-// vendor
-// @import "../../bower_components/pesticide/sass/pesticide";
-@import "../../bower_components/fontawesome/scss/font-awesome";
-@import "components/bootstrap/bootstrap";
-@import "../../bower_components/bourbon/dist/bourbon";
-@import "../../bower_components/jeet.gs/scss/jeet/index";
-@import "../../bower_components/raulghm-sass-utils/dist/index";
+/*------------------------------------------------------------------
 
-// components
-@import "components/general";
+[Master Stylesheet]
 
-// helpers
-@import "helpers/helpers";
+Project:	RenameMe
+Version:	0.0.0
+Created:	00/00/00
+Author:		Raúl Hernández M. <raulghm@gmail.com>
 
-// fonts
-@import "fonts/fo";
+[Table of contents]
 
-// layout
-@import "layout/scaffolding";
+1. Vendors
+2. Base
+3. Helpers
+4. Utils
+5. Fonts
+6. Modules
+7. Project's components/styles
 
-// partials
-@import "partials/header";
-@import "partials/footer";
+-------------------------------------------------------------------*/
 
-// pages
-@import "pages/default";
+/*------------------------------------*
+	Vendors
+*------------------------------------*/
+
+@import '../../bower_components/raulghm-sass-utils/dist/mixins/helpers';
+@import '../../bower_components/bourbon/dist/bourbon';
+@import 'vendor/bootstrap';
+@import 'vendor/highlight';
+
+/*------------------------------------*
+	Base
+*------------------------------------*/
+
+@import 'base/scaffolding';
+@import 'base/mixins';
+
+/*------------------------------------*
+	Helpers
+*------------------------------------*/
+
+@import 'helpers/helpers';
+
+/*------------------------------------*
+	Utils
+*------------------------------------*/
+
+@import 'utils/utils';
+
+/*------------------------------------*
+	Fonts
+*------------------------------------*/
+
+@import 'fonts/font-awesome';
+
+/*------------------------------------*
+	Components
+*------------------------------------*/
+
+@import 'components/PageBody';
+@import 'components/PageContent';
+@import 'components/Content';
+@import 'components/Default';

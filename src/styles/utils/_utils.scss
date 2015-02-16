@@ -1,10 +1,11 @@
 /*------------------------------------------------------------------
 
-Name:			Helpers
-Date:     00/00/00
-Author:   Name <email>
+Name:     Utilities
+Created:	05/02/15
+Author:		Raúl Hernández M. <raulghm@gmail.com>
 
 -------------------------------------------------------------------*/
 
-
-
+.cf {
+	@extend .clearfix;
+}

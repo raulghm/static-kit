@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------
+
+Name:     PageContent
+Created:  00/00/00
+Author:   Name <email>
+
+Docs: https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
+
+Naming example:
+	PageContent
+	PageContent--modifierName
+	PageContent-descendantName
+	PageContent.is-stateOfComponent
+	u-utilityName
+
+-------------------------------------------------------------------*/
+
+$component: 'PageContent';
+
+.#{$component} {
+
+  &-descendantName {}
+
+  &--modifierName {
+    .#{$component}-descendantName {}
+  }
+
+  &.is-stateOfComponent {}
+
+  .u-utilityName {}
+
+}

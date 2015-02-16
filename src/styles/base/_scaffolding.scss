@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------
+
+Name:			Scaffolding
+Created:	05/02/15
+Author:		Raúl Hernández M. <raulghm@gmail.com>
+
+-------------------------------------------------------------------*/
+
+a {
+	color: $link-color;
+
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+
