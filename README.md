@@ -1,7 +1,5 @@
 <img width="60" src="src/images/favicon.png"/>
 
-
-
 # Starter web kit
 > for static web development
 

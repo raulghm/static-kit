@@ -127,11 +127,10 @@ gulp.task('fonts', function() {
  * 	HTML pages task (assemble)
  * 	-------------------------------------------- */
 gulp.task('pages', function() {
-	src.pages = [SRC + '/templates/pages/**/*', SRC + '/templates/layouts/**/*', SRC + '/templates/partials/**/*'];
+	src.pages = [SRC + '/templates/pages/**/*', SRC + '/templates/layouts/**/*', SRC + '/templates/partials/**/*', SRC + '/data/**/*.{yml,json}'];
 	return gulp.src(src.pages[0])
-		// .pipe($.changed('./fronting/dist', {extension: '.html'}))
 		.pipe($.if('*.hbs', $.assemble({
-			// data: {},
+			data: src.pages[3],
 			partials: SRC + '/templates/partials/**/*.hbs',
 			layout: 'default',
 			layoutext: '.hbs',
@@ -175,7 +174,7 @@ gulp.task('styles', function() {
 		.pipe($.changed(DEST))
 		.pipe(gulp.dest(DEST + '/styles'))
 		.pipe($.filter('**/*.css'))
-		.pipe($.if(!RELEASE, $.livereload()))
+		.pipe($.if(watch, $.livereload()))
 });
 
 /* 	--------------------------------------------
