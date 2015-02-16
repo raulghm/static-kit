@@ -35,6 +35,12 @@
 $ gulp 
 ```
 
+### Serve + autoreload
+
+```
+$ gulp autoreload
+```
+
 ### Build
 
 ```
@@ -43,8 +49,11 @@ $ gulp build
 
 ### Distribution
 
-```
+``` bash
 $ gulp build --dist
+```
+```
+$ gulp --dist
 ```
 
 ---
