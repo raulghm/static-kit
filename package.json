@@ -1,9 +1,9 @@
 {
   "name": "npm",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": "true",
   "authors": [
-    "raulghm <raulghm@gmail.com>"
+    "Raul Hernandez <raulghm@gmail.com>"
   ],
   "devDependencies": {
     "browser-sync": "~1.9.1",

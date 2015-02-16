@@ -1,6 +1,6 @@
 {
   "name": "bower",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "authors": [
     "Raul Hernandez <raulghm@gmail.com>"
   ],
@@ -19,7 +19,6 @@
     "jeet.gs": "*",
     "jquery": "1.10.1",
     "pesticide": "git://github.com/mrmrs/pesticide",
-    "highlight": "git://github.com/isagalaev/highlight.js",
     "raulghm-sass-utils": "*"
   },
   "devDependencies": {
