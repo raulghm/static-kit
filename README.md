@@ -68,7 +68,7 @@ $ gulp build
 ```
 
 ### Distribution
-#### Compile, build and concatenate assets files
+#### Compile, build and minify assets files
 
 ``` bash
 $ gulp build --dist
